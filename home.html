@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+    
+<p class="d-inline-flex gap-1">
+    <a class="btn btn-primary" data-bs-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Adres pasażera </a>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2">Informacje o pasażeru</button>
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target=".multi-collapse" aria-expanded="false" aria-controls="multiCollapseExample1 multiCollapseExample2">Toggle both elements</button>
+</p>
+
+<div class="row">
+    <div class="col">
+        <div class="collapse multi-collapse" id="multiCollapseExample1">
+            <div class="card card-body">
+                <form action="fiil.php" method="POST">
+                    <div class="container text-center">
+                        <h1>Adres</h1>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="miejscowosc" class="form-label">Miejscowość</label>
+                                <input type="text" id="miejscowosc" name="miejscowosc" class="form-control" placeholder="Podaj miejscowość">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="numer_domu" class="form-label">Numer domu</label>
+                                <input type="text" id="numer_domu" name="numer_domu" class="form-control" placeholder="Podaj numer domu">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="numer_lokalu" class="form-label">Numer lokalu</label>
+                                <input type="text" id="numer_lokalu" name="numer_lokalu" class="form-control" placeholder="Podaj numer lokalu">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="powiat" class="form-label">Powiat</label>
+                                <input type="text" id="powiat" name="powiat" class="form-control" placeholder="Podaj powiat">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="ulica" class="form-label">Ulica</label>
+                                <input type="text" id="ulica" name="ulica" class="form-control" placeholder="Podaj ulicę">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="wojewodztwo" class="form-label">Województwo</label>
+                                <input type="text" id="wojewodztwo" name="wojewodztwo" class="form-control" placeholder="Podaj województwo">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="ID_adres" class="form-label">ID Adresu</label>
+                                <input type="number" id="ID_adres" name="ID_adres" class="form-control" placeholder="Podaj ID">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group mb-3 d-flex justify-content-center">
+                        <input type="submit" value="Wyślij" name="submit" class="btn btn-primary">
+                        <button type="submit" name="create" class="btn btn-primary">Create</button>
+                        <button type="submit" name="read" class="btn btn-primary">Read</button>
+                        <button type="submit" name="update" class="btn btn-primary">Update</button>
+                        <button type="submit" name="delete" class="btn btn-primary">Delete</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="collapsemulti-collapse" id="multiCollapseExample2">
+            <div class="card card-body">
+                
+                <form action="fill_passenger.php" method="POST">
+                    <div class="container text-center">
+                        <h1>Pasażer</h1>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <label for="imie" class="form-label">Imie</label>
+                                <input type="text" id="imie" name="imie" class="form-control" placeholder="Podaj imie pasażera">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="surname" class="form-label">Nazwisko </label>
+                                <input type="text" id="surname" name="surname" class="form-control" placeholder="Podaj nazwisko ">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="mail" class="form-label">Mail </label>
+                                <input type="text" id="mail" name="mail" class="form-control" placeholder="Podaj mail ">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="pesel" class="form-label">Pesel</label>
+                                <input type="text" id="pesel" name="pesel" class="form-control" placeholder="Podaj pesel">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="telefon" class="form-label">Telefon </label>
+                                <input type="text" id="telefon" name="telefon" class="form-control" placeholder="Podaj telefon">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="ID_adres" class="form-label">ID_Adres Adres pasażera</label>
+                                <input type="number" id="ID_adres" name="ID_adres" class="form-control" placeholder="Podaj ID_adres">
+                            </div>
+                            
+
+                            <div class="form-group mb-3 d-flex justify-content-center">
+                                <input type="submit" value="Wyślij" name="submit" class="btn btn-primary">
+                                <button type="submit" name="create" class="btn btn-primary">Create</button>
+                                <button type="submit" name="read" class="btn btn-primary">Read</button>
+                                <button type="submit" name="update" class="btn btn-primary">Update</button>
+                                <button type="submit" name="delete" class="btn btn-primary">Delete</button>
+                            </div>
+                        </form>
+                        </div>
+                    </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
