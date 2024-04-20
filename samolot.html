@@ -13,6 +13,10 @@
         <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSamolot" aria-expanded="false" aria-controls="collapseSamolot">
           Wybierz samolot 
         </button>
+        
+            <button class="btn btn-primary" type="button" data-bs-toggle="collapse"  data-bs-target="#multiCollapseExample2" aria-expanded="false" aria-controls="multiCollapseExample2" onclick="window.location.href='page.html'">Powrót do panelu głównego</button>
+           
+        
     </p>
     <div style="min-height: 120px;">
         <div class="collapse collapse-horizontal" id="collapseSamolot">
@@ -49,29 +53,28 @@
     <div style="min-height: 120px;">
         <div class="collapse collapse-horizontal" id="collapseLot">
             <div class="card card-body" style="width: 300px;">
-                <form action="fill_passenger.php" method="POST">
+                <form action="lot.php" method="POST">
                     <div class="container text-center">
                         <h1>Lot</h1>
                         <div class="row">
                             <div class="col-md-6">
-                                <label for="numer_lotu" class="form-label">Numer lotu</label>
-                                <input type="text" id="numer_lotu" name="numer_lotu" class="form-control" placeholder="Podaj numer lotu">
+                                <label for="ID_numer_lotu" class="form-label">Numer lotu</label>
+                                <input type="number" id="ID_numer_lotu" name="ID_numer_lotu" class="form-control" placeholder="Podaj numer lotu">
                             </div>
                             <div class="col-md-6">
                                 <label for="data_wylotu" class="form-label">Data wylotu </label>
                                 <input type="date" id="data_wylotu" name="data_wylotu" class="form-control" placeholder="data wylotu">
                             </div>
                             <div class="col-md-6">
-                                <label for="samolot_id" class="form-label">Samolot_id </label>
-                                <input type="number" id="samolot_id" name="samolot_id" class="form-control" placeholder="Podaj ID samolotu ">
+                                <label for="ID_samolotu" class="form-label">Samolot_id </label>
+                                <input type="number" id="ID_samolotu" name="ID_samolotu" class="form-control" placeholder="Podaj ID samolotu ">
                             </div>
                         </div>
                         <div class="form-group mb-3 d-flex justify-content-center">
-                            <input type="submit" value="Wyślij" name="submit" class="btn btn-primary">
-                            <button type="submit" name="create" class="btn btn-primary">Create</button>
-                            <button type="submit" name="read" class="btn btn-primary">Read</button>
-                            <button type="submit" name="update" class="btn btn-primary">Update</button>
-                            <button type="submit" name="delete" class="btn btn-primary">Delete</button>
+                            <button type="submit" name="create" class="btn btn-primary">Utwórz</button>
+                            <button type="submit" name="read" class="btn btn-primary">Wyświetl</button>
+                            <button type="submit" name="update" class="btn btn-primary">Aktualizuj</button>
+                            <button type="submit" name="delete" class="btn btn-primary">Usuń </button>
                         </div>
                     </div>
                 </form>
